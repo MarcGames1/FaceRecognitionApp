@@ -1,45 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { ReactComponent } from '*.svg';
-
-class Register extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        registerEmail: "",
-        registerPassword: "",
-      };
-    }
-    onEmailChange = (event) => {
-      this.setState({ signInEmail: event.target.value });
-    };
-    onPasswordChange = (event) => {
-      this.setState({ signInPassword: event.target.value });
-    };
-  
-    onSubmitSignIn = () => {
-      fetch("http://localhost:3000/signin", {
-        method: "post",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: this.state.signInEmail,
-          password: this.state.signInPassword,
-        }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          if (data === "success") {
-            this.props.onRouteChange("home");
-          } else {
-            alert(data);
-          }
-        });
-    };
-=======
 
 
 const Register = ({ onRouteChange }) => {
->>>>>>> 4bd60adf9597565e7f5e5fb0e5e7caf9225ef124
     return (
         <article className="br3 ba  b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
             <main className="pa4 black-80">
